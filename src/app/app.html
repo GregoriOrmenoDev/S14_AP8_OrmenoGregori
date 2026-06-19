@@ -1,4 +1,4 @@
-<nav>
+<nav *ngIf="authService.isLoggedIn()">
   <span class="nav-logo">🎮 GameZone</span>
   <div class="nav-links">
     <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Inicio</a>
@@ -6,8 +6,9 @@
     <a routerLink="/noticias" routerLinkActive="active">Noticias</a>
     <a routerLink="/contacto" routerLinkActive="active">Contacto</a>
   </div>
+  <button class="btn-logout" (click)="authService.logout()">Cerrar Sesión</button>
 </nav>
 
-<div class="contenido">
+<div [class.contenido]="authService.isLoggedIn()">
   <router-outlet></router-outlet>
 </div>

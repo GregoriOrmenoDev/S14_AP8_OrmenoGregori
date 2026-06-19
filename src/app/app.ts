@@ -1,11 +1,12 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
+import { AuthService } from './services/auth.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.html',
   standalone: false,
-  styleUrl: './app.css'
+  styleUrl: './app.css',
 })
 export class App {
-  protected readonly title = signal('travel-app');
+  constructor(public authService: AuthService) {}
 }

@@ -45,3 +45,21 @@ nav a.active {
   padding: 40px 30px;
   min-height: calc(100vh - 70px);
 }
+
+/* ===== LOGOUT ===== */
+.btn-logout {
+  background: transparent;
+  color: #f87171;
+  border: 1px solid #f87171;
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn-logout:hover {
+  background: #f87171;
+  color: #0f0d1a;
+}

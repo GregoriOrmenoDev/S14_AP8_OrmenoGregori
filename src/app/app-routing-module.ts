@@ -4,24 +4,16 @@ import { Home } from './pages/home/home';
 import { Juegos } from './pages/juegos/juegos';
 import { Noticias } from './pages/noticias/noticias';
 import { Contacto } from './pages/contacto/contacto';
+import { Login } from './pages/login/login';
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
-  {
-    path: '',
-    component: Home,
-  },
-  {
-    path: 'juegos',
-    component: Juegos,
-  },
-  {
-    path: 'noticias',
-    component: Noticias,
-  },
-  {
-    path: 'contacto',
-    component: Contacto,
-  },
+  { path: 'login', component: Login },
+  { path: '', component: Home, canActivate: [AuthGuard] },
+  { path: 'juegos', component: Juegos, canActivate: [AuthGuard] },
+  { path: 'noticias', component: Noticias, canActivate: [AuthGuard] },
+  { path: 'contacto', component: Contacto, canActivate: [AuthGuard] },
+  { path: '**', redirectTo: '/login' },
 ];
 
 @NgModule({
