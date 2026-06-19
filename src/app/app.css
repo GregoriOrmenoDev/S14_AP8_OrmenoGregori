@@ -1,0 +1,47 @@
+/* ===== NAV ===== */
+nav {
+  background: #0f0d1a;
+  border-bottom: 2px solid #3b2d6e;
+  padding: 14px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo {
+  color: #a855f7;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.nav-links {
+  display: flex;
+  gap: 8px;
+}
+
+nav a {
+  color: #94a3b8;
+  text-decoration: none;
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: background 0.2s, color 0.2s;
+}
+
+nav a:hover {
+  background: #1e1b2e;
+  color: #e2e8f0;
+}
+
+nav a.active {
+  background: #3b2d6e;
+  color: #c4b5fd;
+}
+
+/* ===== CONTENIDO ===== */
+.contenido {
+  padding: 40px 30px;
+  min-height: calc(100vh - 70px);
+}
