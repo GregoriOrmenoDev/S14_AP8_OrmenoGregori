@@ -1,5 +1,5 @@
 import { NgModule, provideBrowserGlobalErrorListeners } from '@angular/core';
-import { BrowserModule, provideClientHydration, withEventReplay } from '@angular/platform-browser';
+import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing-module';
@@ -15,7 +15,6 @@ import { Login } from './pages/login/login';
   imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
   providers: [
     provideBrowserGlobalErrorListeners(),
-    provideClientHydration(withEventReplay()),
   ],
   bootstrap: [App],
 })
